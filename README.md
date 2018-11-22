@@ -44,13 +44,11 @@ Please include a `database.sql` text file in your repo that includes all of your
 
 ## Stretch Goals
 
-    - [ ]  Add Bootstrap to the front end and style it up!
-     -  Buttons
-     -  Cards
-     -  Jumbotron
+- [ ]  Add Bootstrap to the front end and style it up!
+  -  Buttons
+  -  Cards
+  -  Jumbotron
 
+- [ ]  In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
 
-    - [ ]  In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
-
-
-    - [ ]  Adjust the logic so that completed tasks are brought to the bottom of the page, where the remaining tasks left to complete are brought to the top of the list.
+- [ ]  Adjust the logic so that completed tasks are brought to the bottom of the page, where the remaining tasks left to complete are brought to the top of the list.
