@@ -22,7 +22,7 @@ app.post('/task', (req, res) => {
     console.log('in POST route', taskData);
     let query = `INSERT INTO "todo" ("task", "priority", "completed")
     VALUES ($1, $2, $3);`;
-    pool.query(query, [taskData.task, taskData.priority, taskData.completed])
+    pool.query(query, [taskData.task, taskData.priority, false])
     .then(() => {
         res.sendStatus(201);
     }).catch((error) => {
@@ -42,6 +42,29 @@ app.get('/task', (req, res) => {
     })
 });
 
+app.delete('/task/:id', (req, res) => {
+    let id = req.params.id;
+    console.log('delete route called with id of:', id);
+    pool.query(`DELETE FROM "todo" WHERE id = $1;`, [id])
+    .then((results) => {
+        res.sendStatus(204);
+    }).catch((err) => {
+        console.log(err);
+        res.sendStatus(500);
+    })
+});
+
+app.put('/task/:id', (req, res) => {
+    let id = req.params.id;
+    let query = `UPDATE "todo" SET priority = $1, completed = $2 WHERE id = $3;`;
+    pool.query(query, [4, true, id])
+    .then((result) => {
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('Error in PUT', error);
+        res.sendStatus(500);
+    })
+});
 
 pool.on('connect', () => {
     console.log('Postgres connected!');
