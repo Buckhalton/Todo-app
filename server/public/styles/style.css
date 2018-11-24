@@ -1,3 +1,50 @@
 .complete {
     text-decoration: line-through;
 }
+
+.jumbotron{
+    background-color: #76a2f3;
+}
+
+.checkBox {
+    margin-right: 10px;
+}
+
+.paper {
+    padding: 37px 55px 27px;
+    position: relative;
+    background: white;
+    background: -webkit-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+    background: -moz-linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+    background: linear-gradient(top, #DFE8EC 0%, white 8%) 0 57px;
+    -webkit-background-size: 100% 30px;
+    -moz-background-size: 100% 30px;
+    -ms-background-size: 100% 30px;
+    background-size: 100% 30px;
+}
+
+.inputTask {
+    width: 66%;
+}
+
+.select {
+    width: 33%;
+}
+
+.deleteButton {
+    width: 65px;
+    height: 23px;
+
+}
+
+ul {
+    padding-top: 5px;
+}
+
+li {
+    font-family: 'Ranga', cursive;
+    font-size: 24px;
+    padding: 3px;
+    margin: 5px;
+    list-style-type: none;
+}

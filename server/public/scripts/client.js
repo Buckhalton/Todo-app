@@ -5,25 +5,21 @@ function onReady(){
     $('#taskDisplay').on('click', '.deleteButton', deleteTask);
     $('#taskDisplay').on('click', '.checkBox', completeTask);
     getTasks();
-}
+} // end onReady
 
 function completeTask() {
-    // $(this).parent().addClass('complete');
     let id = $(this).parent().data('taskId'); 
-    console.log(id);
         $.ajax({
         method: 'PUT',
         url: `/task/${id}`,
     }).then((response) => {
-        console.log(response);
         getTasks();
     }).catch((error) => {
         console.log(error);
     })
-}
+} // end completeTask
 
 function deleteTask() {
-    console.log('In deleteTask');
     let currentTask = $(this).parent();
     let id = currentTask.data('taskId');
     $.ajax({
@@ -35,7 +31,7 @@ function deleteTask() {
     }).catch((error) => {
         console.log('Error with DELETE', error);
     })
-}
+} // end deleteTask
 
 function submitTask() {
     console.log('in submitTask');
@@ -52,8 +48,7 @@ function submitTask() {
     }).catch((error) => {
         console.log('Error with POST', error);
     })
-    
-}
+} // end submitTask
 
 function getTasks() {
     $.ajax({
@@ -63,11 +58,21 @@ function getTasks() {
         $('#taskDisplay').empty();
         for(let data of response){
             if(data.completed === true){
-                let listRow = $(`<li class="complete"><input class="checkBox" checked="true" type="checkbox">${data.task}<button class="deleteButton">Delete</button></li>`);
+                //if the task has been completed, append this
+                let listRow = $(`<li class="complete">
+                                    <input class="checkBox" checked="true" type="checkbox">${data.task}
+                                        <button type="button" class="close deleteButton" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span></button>
+                                </li>`);
                 $('#taskDisplay').append(listRow);
                 $(listRow).data('taskId', data.id);
             } else if(data.completed === false){
-                let listRow = $(`<li><input class="checkBox" type="checkbox">${data.task}<button class="deleteButton">Delete</button></li>`);
+                // else, if its incomplete, append this
+                let listRow = $(`<li>
+                                    <input class="checkBox" type="checkbox">${data.task}
+                                        <button type="button" class="close deleteButton" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span></button>
+                                </li>`);
                 $('#taskDisplay').append(listRow);
                 $(listRow).data('taskId', data.id);
             }
@@ -75,4 +80,4 @@ function getTasks() {
     }).catch((error) => {
         console.log('Error with GET', error);
     })
-}
+} // end getTasks

@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 5000;
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.static('server/public'));
 
+// pg setup
 const pg = require('pg');
 const Pool = pg.Pool;
 const config = {
@@ -16,7 +17,9 @@ const config = {
     idleTimeoutMillis: 30000
 }
 const pool = new Pool(config);
+// end pg setup
 
+//Routes
 app.post('/task', (req, res) => {
     let taskData = req.body;
     console.log('in POST route', taskData);
@@ -29,7 +32,7 @@ app.post('/task', (req, res) => {
         res.sendStatus(500);
         console.log('Error in POST route', error);
     })
-});
+}); // end POST route
 
 app.get('/task', (req, res) => {
     console.log('In GET route');
@@ -40,7 +43,7 @@ app.get('/task', (req, res) => {
         console.log('Error in GET', error);
         res.sendStatus(500);
     })
-});
+}); // end GET route
 
 app.delete('/task/:id', (req, res) => {
     let id = req.params.id;
@@ -52,7 +55,7 @@ app.delete('/task/:id', (req, res) => {
         console.log(err);
         res.sendStatus(500);
     })
-});
+}); // end DELETE route
 
 app.put('/task/:id', (req, res) => {
     let id = req.params.id;
@@ -64,15 +67,17 @@ app.put('/task/:id', (req, res) => {
         console.log('Error in PUT', error);
         res.sendStatus(500);
     })
-});
+}); // end PUT route
+
+// end Routes
 
 pool.on('connect', () => {
     console.log('Postgres connected!');
-});
+}); // end connect success log
 
 pool.on('error', () => {
     console.log('Error connecting to DB', error);
-});
+}); // end connect error log
 
 app.listen(PORT, () => {
     console.log('Server is running on Port', PORT);
