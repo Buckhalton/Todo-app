@@ -16,7 +16,7 @@ function completeTask() {
         getTasks();
     }).catch((error) => {
         console.log(error);
-    })
+    }) // end PUT request
 } // end completeTask
 
 function deleteTask() {
@@ -33,7 +33,7 @@ function deleteTask() {
             getTasks();
         }).catch((error) => {
             console.log('Error with DELETE', error);
-        })
+        }) // end DELETE request
     } // end if statement
 } // end deleteTask
 
@@ -52,7 +52,7 @@ function submitTask() {
         $('#taskIn').val('');
     }).catch((error) => {
         console.log('Error with POST', error);
-    })
+    }) // end POST request
 } // end submitTask
 
 function getTasks() {
@@ -84,5 +84,5 @@ function getTasks() {
         }
     }).catch((error) => {
         console.log('Error with GET', error);
-    })
+    }) // end GET request
 } // end getTasks
