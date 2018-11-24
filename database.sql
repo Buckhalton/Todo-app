@@ -1,8 +1,8 @@
-CREATE TABLE todo (
-    id SERIAL PRIMARY KEY,
-    task VARCHAR(200),
-    priority FLOAT,
-    completed BOOLEAN
+CREATE TABLE 'todo' (
+    'id' SERIAL PRIMARY KEY,
+    'task' VARCHAR(200),
+    'priority' FLOAT,
+    'completed' BOOLEAN
 );
 
 INSERT INTO todo (task, completed, priority)
