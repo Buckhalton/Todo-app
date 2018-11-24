@@ -22,15 +22,19 @@ function completeTask() {
 function deleteTask() {
     let currentTask = $(this).parent();
     let id = currentTask.data('taskId');
-    $.ajax({
-        method: 'DELETE',
-        url: `/task/${id}`
-    }).then((response) => {
-        console.log('back from DELETE');
-        getTasks();
-    }).catch((error) => {
-        console.log('Error with DELETE', error);
-    })
+    let result = confirm('Are you sure you want to delete this task?');
+    if(result) {
+        //if the user confirms to delete, proceed with the ajax request.
+        $.ajax({
+            method: 'DELETE',
+            url: `/task/${id}`
+        }).then((response) => {
+            console.log('back from DELETE');
+            getTasks();
+        }).catch((error) => {
+            console.log('Error with DELETE', error);
+        })
+    } // end if statement
 } // end deleteTask
 
 function submitTask() {
