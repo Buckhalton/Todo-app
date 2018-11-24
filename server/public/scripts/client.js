@@ -49,6 +49,7 @@ function submitTask() {
         data: objectToSend
     }).then((response) => {
         getTasks();
+        $('#taskIn').val('');
     }).catch((error) => {
         console.log('Error with POST', error);
     })
