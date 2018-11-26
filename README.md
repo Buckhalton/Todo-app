@@ -1,54 +1,51 @@
+# Name of Application
+This project is a simple To-Do List made to keep track of everyday tasks.
+Live Version: https://arcane-headland-69177.herokuapp.com/
 
+## Built With
+JavaScript
+HTML
+CSS
+jQuery
+PostgreSQL
+express.js
+node.Js
+Bootstrap
 
-## Weekend Challenge #3
+## Getting Started
+Fork and clone the repository, and open it in a text editor. Make you have node pack manager installed.
 
-Hello Primers! 
+### Prerequisites
+[node.js](https://nodejs.org/en/)
+[jQuery](https://jquery.com/)
+[PostgreSQL](https://www.postgresql.org/)
+[express.js](https://expressjs.com/)
+[Bootstrap](https://getbootstrap.com/)
+[Postico](https://eggerapps.at/postico/)
 
-Welcome to your 3rd weekend challenge!
+### Installing
+Steps to get the development environment running.
+1. Download the project,
+2. Type npm install in the terminal,
+3. Copy the dB information into Postico and execute it,
+4. Type npm start, 
+5. Go to localhost:5000 to view the website.
 
-Full stack is pretty awesome, huh? The idea that you are able to spin up a full application architecture in such a short time is pretty incredible. This weekend is all about showing us that you have a handle on each of the different parts of the full stack. 
+## Screen Shot
+![To-Do List Project](/assets/images/toDoList.jpg)
 
-## The To-Do App
+### Completed Features
 
-You are going to create a 'TO DO' application. This type of application is very common to tackle when learning a new language, which makes it extremely valuable to work through for the first time. Chances are good that at some point in your career you will tackle this again while learning another language.
+- [x] Ability for the user to add a task to the list, and rank it in order of importance
+- [x] The ability for the user to complete and/or delete tasks.
+### Next Steps
+ 
+- [ ] Adding the ability for the user to set a date or timeline in which they wish to complete the task.
 
-**Here are the specific components for the challenge:**
+## Deployment
+In order to get this deployed on a live system, you will have to use a service like heroku, and link the database to the server.
 
-* Create a front end experience that allows a user to create a Task.
-* When the Task is created, it should be stored inside of a database (SQL)
-* Whenever a Task is created the front end should refresh to show all tasks that need to be completed.
-* Each Task should have an option to 'Complete' or 'Delete'.
-* When a Task is complete, its visual representation should change on the front end. For example, the background of the task container could change from gray to green. The complete option should be  'checked off'. Each of these are accomplished in CSS, but will need to hook into logic to know whether or not the task is complete.
-* Whether or not a Task is complete should also be stored in the database.
-* Deleting a Task should remove it both from the front end as well as the Database.
-
-### Styling
-
-Use CSS styling to move the aesthetic of the page beyond the vanilla HTML look:
-
-Background color of the page
-font family and size
-text color & or background color of tasks to show whether or not they have been completed
-
-### Approach
-
-We would recommend you spend some time thinking about how to approach this problem. Think through all the logic that will be needed prior to writing any code. Take your time, relax, remember that impostor syndrome is real, and that you are capable of knocking this out of the park!
-
-### Create a Database
-
-Be sure to create a new database through Postico. Use the name `weekend-to-do-app`. You will need to use this name in your database connection configuration on your server.
-
-### Database Structure
-
-Please include a `database.sql` text file in your repo that includes all of your `CREATE TABLE` queries. This is so we can re-create your database while testing your app.
-
-## Stretch Goals
-
-- [ ]  Add Bootstrap to the front end and style it up!
-  -  Buttons
-  -  Cards
-  -  Jumbotron
-
-- [ ]  In whatever fashion you would like, create an 'are you sure: yes / no' option when deleting a task.
-
-- [ ]  Adjust the logic so that completed tasks are brought to the bottom of the page, where the remaining tasks left to complete are brought to the top of the list.
+## Authors
+Isaiah Buckhalton
+## Acknowledgments
+Zach Reed - [Notebook Paper Background](https://coderwall.com/p/fw_b4q/notebook-paper-css)
