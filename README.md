@@ -3,25 +3,25 @@ This project is a simple To-Do List made to keep track of everyday tasks.
 Live Version: https://arcane-headland-69177.herokuapp.com/
 
 ## Built With
-JavaScript
-HTML
-CSS
-jQuery
-PostgreSQL
-express.js
-node.Js
-Bootstrap
+JavaScript, 
+HTML, 
+CSS, 
+jQuery, 
+PostgreSQL, 
+express.js, 
+node.Js, 
+Bootstrap, 
 
 ## Getting Started
-Fork and clone the repository, and open it in a text editor. Make you have node pack manager installed.
+Fork and clone the repository, and open it in a text editor. Make you have node package manager installed.
 
 ### Prerequisites
-[node.js](https://nodejs.org/en/)
-[jQuery](https://jquery.com/)
-[PostgreSQL](https://www.postgresql.org/)
-[express.js](https://expressjs.com/)
-[Bootstrap](https://getbootstrap.com/)
-[Postico](https://eggerapps.at/postico/)
+[node.js](https://nodejs.org/en/), 
+[jQuery](https://jquery.com/), 
+[PostgreSQL](https://www.postgresql.org/), 
+[express.js](https://expressjs.com/), 
+[Bootstrap](https://getbootstrap.com/), 
+[Postico](https://eggerapps.at/postico/), 
 
 ### Installing
 Steps to get the development environment running.
