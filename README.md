@@ -32,7 +32,7 @@ Steps to get the development environment running.
 5. Go to localhost:5000 to view the website.
 
 ## Screen Shot
-![To-Do List Project](/assets/images/toDoList.jpg)
+![To-Do List Project](/server/public/images/toDoList.jpg)
 
 ### Completed Features
 
