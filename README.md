@@ -10,7 +10,7 @@ jQuery,
 PostgreSQL, 
 express.js, 
 node.Js, 
-Bootstrap, 
+Bootstrap
 
 ## Getting Started
 Fork and clone the repository, and open it in a text editor. Make you have node package manager installed.
@@ -21,15 +21,15 @@ Fork and clone the repository, and open it in a text editor. Make you have node 
 [PostgreSQL](https://www.postgresql.org/), 
 [express.js](https://expressjs.com/), 
 [Bootstrap](https://getbootstrap.com/), 
-[Postico](https://eggerapps.at/postico/), 
+[Postico](https://eggerapps.at/postico/) 
 
 ### Installing
-Steps to get the development environment running.
-1. Download the project,
-2. Type npm install in the terminal,
-3. Copy the dB information into Postico and execute it,
-4. Type npm start, 
-5. Go to localhost:5000 to view the website.
+Below are the steps to get the development environment running.
+1. Download the project
+2. Type npm install in the terminal
+3. Copy the dB information into Postico and execute it
+4. Type npm start in the terminal 
+5. Go to localhost:5000 to view the website
 
 ## Screen Shot
 ![To-Do List Project](/server/public/images/toDoList.jpg)
